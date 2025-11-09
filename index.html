@@ -1,98 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BlvcKultvre – Web3 Project Marketing & Community Management" />
-  <title>BlvcKultvre | Web3 Project Marketing & Community</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlvcKultvre | Web3 Marketing / Community Management</title>
   <style>
-    /* --- Global Styles --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
+    /* --- Base Styles --- */
     body {
-      background-color: #0f0f0f;
-      color: #f4e1c1;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
+    a { color: #d4a373; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    a {
-      color: #f4e1c1;
-      text-decoration: none;
-    }
-
-    h1, h2 {
-      color: #f4e1c1;
-    }
-
-    /* --- Layout --- */
-    header {
-      text-align: center;
-      padding: 100px 20px 60px;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #d6c3a1;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      border-bottom: 1px solid #f4e1c1;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .skills {
+    /* --- Navbar --- */
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: #111;
+      top: 0;
+      left: 0;
+      padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+    nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+    nav ul li { margin-left: 2rem; }
+    
+    /* --- Sections --- */
+    section {
+      padding: 100px 20px 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1, h2, h3 { color: #f5f5f5; margin-bottom: 0.5rem; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; border-bottom: 2px solid #d4a373; display: inline-block; padding-bottom: 5px; }
+    h3 { font-size: 1.5rem; color: #d4a373; }
+    p { margin-bottom: 1rem; }
+
+    /* --- Cards / Stats --- */
+    .stats {
+      display: flex;
+      gap: 2rem;
       flex-wrap: wrap;
-      gap: 10px;
+      margin-top: 20px;
     }
-
-    .skill {
-      border: 1px solid #f4e1c1;
-      padding: 8px 14px;
-      border-radius: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-    }
-
-    footer {
+    .stat {
+      background: #1a1a1a;
+      padding: 20px;
+      flex: 1 1 200px;
+      border-radius: 10px;
       text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid #f4e1c1;
-      color: #d6c3a1;
+    }
+    .stat h3 { margin: 0; font-size: 1.5rem; }
+    .stat p { margin: 0; color: #aaa; }
+
+    /* --- Contact --- */
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #d4a373;
+      color: #111;
+      border-radius: 5px;
+    }
+    .contact a:hover { background: #b57b57; }
+
+    /* --- Smooth scroll offset for navbar --- */
+    section::before {
+      content: "";
+      display: block;
+      height: 80px;
+      margin-top: -80px;
     }
 
-    footer a {
-      margin: 0 10px;
-      font-weight: 500;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      section h2 { font-size: 1.5rem; }
+    /* --- Responsive --- */
+    @media(max-width: 600px){
+      nav ul { flex-direction: column; gap: 10px; }
+      .stats { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
+  <nav>
+    <div><strong>BlvcKultvre</strong></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Hi from <strong>BlvcKultvre</strong></h1>
+    <h2>Web3 Marketing Strategist</h2>
+    <p>I'm a Web3 Marketing expert who thrives on creating impactful solutions. I combine strategic insight with creative flair to amplify brand presence and drive meaningful connections in the digital realm.</p>
+    <p><strong>UTC +1</strong> • <a href="#contact">Let's talk</a></p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Driving Web3 projects' Success, One Campaign at a Time! I'm BlvcKultvre, a Web3 marketing expert and KOL influencer with extensive experience working on top DeFi projects, NFTs, protocols, and memecoins across multiple blockchains like Solana, Ethereum, Base, and Arbitrum.</p>
+    <div class="stats">
+      <div class="stat"><h3>2+</h3><p>Years of Experience</p></div>
+      <div class="stat"><h3>500K+</h3><p>Users onboarded across 5 chains</p></div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <h3>Puffverse - RONIN</h3>
+    <p>Role: Regional head & social media Campaign manager. Managed a team of 100+ KOLs while executing impactful campaigns.</p>
+    <h3>DuckChain - TON</h3>
+    <p>Role: Top Tier KOL. Onboarded 5k+ users, recognized globally, and featured among 12M subscribers.</p>
+    <h3>$BDORAE - BASECHAIN</h3>
+    <p>Role: Marketer & Shiller. Coordinated campaigns to achieve $1M market cap.</p>
+    <h3>$DaoSci - SOLANA</h3>
+    <p>Role: Marketer & Shiller. Led initiatives reaching $3.5M ATH.</p>
+    <h3>Marketing Agency</h3>
+    <p>Owner & Founder of an agency with 100+ KOLs for social marketing and brand exposure.</p>
+    <h3>Education</h3>
+    <p>Advanced Web3 Marketing & Content Strategy Program. Skills acquired: Social Media Marketing, Content Creation, Community Growth, Digital Strategy.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Services</h2>
+    <p>My Specializations:</p>
+    <ul>
+      <li><strong>Web3 Marketer:</strong> Project growth, community building, brand exposure across DeFi/NFTs/blockchains.</li>
+      <li><strong> Community Management :</strong> Crafting narratives, community discussions, amplifying project visibility.</li>
+      <li><strong>Project Management:</strong> Guiding projects from concept to launch, milestone tracking, resource allocation.</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's work together!</p>
+    <p>Telegram / Twitter: <a href="https://t.me/xUnclejayy">@xUnclejayy</a></p>
+  </section>
+
+</body>
+</html>
   <header>
     <h1>BlvcKultvre</h1>
     <p>Web3 Project Marketing & Community Management</p>
@@ -124,7 +189,7 @@
     <h2>Contact & Links</h2>
     <p>Connect with me across platforms:</p>
     <p>
-      <a href="https://x.com/blvckultvre" target="_blank">X (Twitter)</a> |
+      <a href="https://x.com/Unclejayy01" target="_blank">X (Twitter)</a> |
       <a href="https://github.com/BlvcKultvre" target="_blank">GitHub</a> |
       <a href="mailto:contact@blvckultvre.xyz">Email</a>
     </p>
